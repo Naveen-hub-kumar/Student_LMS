@@ -1,0 +1,29 @@
+{% extends "master.html" %} {% block title %} Student list {% endblock title %} {% block content %}
+
+<h1 class="text-center mt-3 mb-3">Students List</h1>
+<div class="container">
+  <table class="table table-striped">
+    <thead class="border border-secondary border-2 rounded">
+      <tr>
+        <th scope="col">S No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Course</th>
+        <th scope="col">Enrollement Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.student_name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.course}}</td>
+        <td>{{student.enrollment_date}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
