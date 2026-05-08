@@ -10,6 +10,7 @@
         <th scope="col">Email ID</th>
         <th scope="col">Course</th>
         <th scope="col">Enrollement Date</th>
+         <th scope="col" class="text-center">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,11 @@
         <td>{{student.email}}</td>
         <td>{{student.course}}</td>
         <td>{{student.enrollment_date}}</td>
+         <td>
+          <a href="{% url 'details' student.id %}" class="btn btn-primary" tabindex="-1" role="button">View</a>
+          <a href="" class="btn btn-success" tabindex="-1" role="button">Update</a>
+          <a href="{% url 'delete_student' student.id %}" class="btn btn-danger" tabindex="-1" role="button">Delete</a>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
