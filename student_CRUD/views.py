@@ -46,3 +46,4 @@ def delete_student(request, id) :
         student = get_object_or_404(studentDetails, pk=id)
         student.delete()
         return redirect("homepage")
+
