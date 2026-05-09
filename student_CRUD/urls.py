@@ -9,6 +9,7 @@ urlpatterns = [
     path("add_student/", views.add_student, name="add_student"), 
     path( "details/<int:id>/",views.details,name="details"),
     path( "delete/<int:id>/",views.delete_student,name="delete_student"),
+    path("api/student/",views.StudentListCreationAPI.as_view(),name="Student-List-Creation-API")
 
 
 ]
